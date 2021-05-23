@@ -7,7 +7,11 @@ class Rating extends Component {
         super(props);
         this.state = {rating: this.props.rating};
     }
-    render() {
+    handleClick(ratingValue) {
+        this.setState({rating:ratingValue});
+    }
+  
+     render() {
         return (
             <div>
                <h1>Rating: {this.state.rating}</h1>
@@ -40,7 +44,7 @@ class Rating extends Component {
                ) : (
                    <IoIosStarOutline onClick={this.handleClick.bind(this,5)}/>
                    )}   
-               )
+               
             </div>
         );
     }
