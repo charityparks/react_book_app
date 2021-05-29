@@ -5,6 +5,7 @@ import Product from './Product';
 class Products extends Component {
 
     products;
+
     constructor(props) {
         super(props);
         this.products = this.getProducts();
