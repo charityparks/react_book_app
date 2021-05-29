@@ -43,7 +43,7 @@ class Rating extends Component {
                    <IoIosStar onClick={this.handleClick.bind(this,5)}/>
                ) : (
                    <IoIosStarOutline onClick={this.handleClick.bind(this,5)}/>
-                   )}   
+                   )} 
                
             </div>
         );

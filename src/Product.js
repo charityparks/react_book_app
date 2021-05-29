@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Rating from './Rating';
+import { Media } from 'react-bootstrap';
 
 class Product extends Component {
 
-    constructor(props) {
+    constructor(props){
         super(props); 
     }
+    
     render() {
         return (
             <div>
@@ -19,7 +21,7 @@ class Product extends Component {
                     />
 
                     <Media.Body>
-                        <h5>{this.props.data.productName</h5>
+                        <h5>{this.props.data.productName}</h5>
                         { this.props.data.releasedDate }
                         <Rating
                             rating={this.props.data.rating}
