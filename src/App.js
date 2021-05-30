@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Products from './Products';
 // import { Button } from 'react-bootstrap';
 // import Rating from './Rating';
+import UserForm from './UserForm';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Products />
+        <UserForm />
 
         {/* <Rating rating="1"/>
         <Rating rating="2"/>
