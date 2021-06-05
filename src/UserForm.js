@@ -31,7 +31,13 @@ class UserForm extends Component {
                 >
                     {({ isSubmitting }) => (
                         <Form>
-                            <Field type=
+                            <Field type=""email" name="email" />
+                            <ErrorMessage name="email" component="div" />
+                            <Field type="password" name="password" />
+                            <ErrorMessage name="password" component="div" />
+                            <button type="submit" disabled={isSubmitting}>
+                                submit
+                            </button>
                         </Form>
                     )}
                 </Formik>
