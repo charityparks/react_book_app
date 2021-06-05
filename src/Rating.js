@@ -53,6 +53,6 @@ export default Rating;
 
 const styles={
     starStyle:{
-        color: 'teal'
+        color: 'blue'
     }
 }
