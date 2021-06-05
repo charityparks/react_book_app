@@ -31,7 +31,7 @@ class UserForm extends Component {
                 >
                     {({ isSubmitting }) => (
                         <Form>
-                            <Field type=""email" name="email" />
+                            <Field type="email" name="email" />
                             <ErrorMessage name="email" component="div" />
                             <Field type="password" name="password" />
                             <ErrorMessage name="password" component="div" />
@@ -45,3 +45,4 @@ class UserForm extends Component {
         )
     }
 }
+export default UserForm;

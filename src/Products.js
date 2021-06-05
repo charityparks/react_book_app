@@ -40,7 +40,7 @@ class Products extends Component {
     }    
 
     render() {
-        // const products = ["learning React", "pro React", "Beginning React"];
+     
         const listProducts = this.products.map((product) => 
             <Product key={product.productName} data={product} />
         );
