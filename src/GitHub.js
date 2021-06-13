@@ -7,9 +7,9 @@ class GitHub extends Component {
         super();
         this.getGitHubData('greg');
     }
-    getGitHubData (searchTerm) {
+    getGitHubData (_searchTerm) {
         axios.get ("https://api.github.com/search/users?q="+_searchTerm)
-        .then (resp => {
+        .then (res => {
             console.log(res.data.items);
         });
     }
