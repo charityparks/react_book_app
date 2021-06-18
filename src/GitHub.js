@@ -7,6 +7,7 @@ class GitHub extends Component {
     constructor() {
         super();
         this.state = {
+            data: [],
             isLoading : true
         };
     }
@@ -20,6 +21,7 @@ componentDidMount() {
         .then (res => {
             this.setState ({
                 isLoading : false,
+                data: res.data.items
             })
             console.log(res.data.items);
         });
