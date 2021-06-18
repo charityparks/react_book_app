@@ -29,7 +29,9 @@ componentDidMount() {
         return (
             <div>
                 { this.state.isLoading && 
-                <h4>Getting data...</h4> }
+                    <ReactLoading type="spinningBubbles" color="#444"
+                 />
+                 }
             </div>
         );
     }
