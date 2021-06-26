@@ -36,7 +36,7 @@ componentDidMount() {
                     width={64}
                     height={64}
                     className="mr-3"
-                    src="holder.js/64x64"
+                    src={user.avatar_url}
                     alt="Generic placeholder"
                 />
             </a>
