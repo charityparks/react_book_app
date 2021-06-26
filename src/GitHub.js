@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'; // npm install axios
 import ReactLoading from 'react-loading';
+import { Media, Form, FormGroup, FormControl, Button } from 'react-bootstrap';
 
 class GitHub extends Component {
 
@@ -28,13 +29,31 @@ componentDidMount() {
     }
     
     render() {
+        const listUsers = this.state.data.map ( (user) =>
+        <Media key={user.id}>
+            <a href={user.html_url}>
+                <img
+                    width={64}
+                    height={64}
+                    className="mr-3"
+                    src="holder.js/64x64"
+                    alt="Generic placeholder"
+                />
+            </a>
+            <Media.Body>
+                <h5>Login: {user.login}</h5>
+                <p>ID: { user.id }</p>
+            </Media.Body>
+        </Media>
+        );
         return (
-            <div>
-                { this.state.isLoading && 
-                    <ReactLoading type="spinningBubbles" color="#444"
-                 />
-                 }
-            </div>
+        <div>
+            <h3>GitHub Users Results</h3>
+            { this.state.isLoading && 
+                        <ReactLoading type="spinningBubbles" color="#444"/>
+            }
+            {listUsers}
+        </div>
         );
     }
 }
