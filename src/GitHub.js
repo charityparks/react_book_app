@@ -9,13 +9,13 @@ class GitHub extends Component {
         super();
         this.state = {
             data: [],
-            isLoading : true
+            isLoading : false
         };
     }
 
-componentDidMount() {
-    this.getGitHubData('greg');
-}
+// componentDidMount() {
+//     this.getGitHubData('greg');
+// }
 
     getGitHubData (_searchTerm) {
         axios.get ("https://api.github.com/search/users?q="+_searchTerm)
