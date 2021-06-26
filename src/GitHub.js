@@ -15,6 +15,9 @@ class GitHub extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);    
     }
+    // componentDidMount () {
+
+    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -36,7 +39,7 @@ class GitHub extends Component {
     }
     
     render() {
-        const listUsers = this.state.data.map ( (user) =>
+        const listUsers = this.state.data.map ((user) =>
         <Media key={user.id}>
             <a href={user.html_url}>
                 <img
@@ -44,7 +47,7 @@ class GitHub extends Component {
                     height={64}
                     className="mr-3"
                     src={user.avatar_url}
-                    alt="Generic placeholder"
+                    // alt="Generic placeholder"
                 />
             </a>
             <Media.Body>
@@ -56,14 +59,14 @@ class GitHub extends Component {
         return (
         <div>
             <Form inline onSubmit={this.handleSubmit}>
-                <Form.Group contolId="formInlineName">
-                    <Form.Control
+                <FormGroup contolId="formInlineName">
+                    <FormControl
                         type="text"
                         value={this.state.searchTerm}
                         placeholder="Enter Search Term"
                         onChange={this.handleChange}
                     />
-                </Form.Group>
+                </FormGroup>
                     {''}
                 <Button type="submit">
                     Search
@@ -71,7 +74,7 @@ class GitHub extends Component {
             </Form>
             <h3>GitHub Users Results</h3>
             { this.state.isLoading && 
-                        <ReactLoading type="spinningBubbles" color="#444"/>
+                        <ReactLoading type="spinningBubbles" color="#444" />
             }
             {listUsers}
         </div>
