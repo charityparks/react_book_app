@@ -52,11 +52,12 @@ class GitHub extends Component {
             </a>
             <Media.Body>
                 <h5>Login: {user.login}</h5>
-                <p>ID: { user.id }</p>
+                <p>Id: { user.id }</p>
             </Media.Body>
         </Media>
-        );
-        return (
+        ); 
+    
+    return (
         <div>
             <Form inline onSubmit={this.handleSubmit}>
                 <FormGroup contolId="formInlineName">
@@ -74,7 +75,7 @@ class GitHub extends Component {
             </Form>
             <h3>GitHub Users Results</h3>
             { this.state.isLoading && 
-                        <ReactLoading type="spinningBubbles" color="#444" />
+                <ReactLoading type="spinningBubbles" color="#444" />
             }
             {listUsers}
         </div>
