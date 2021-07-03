@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 class UserForm extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+    }
     render(){
         return (
             <div>
@@ -37,7 +37,7 @@ class UserForm extends Component {
                         setSubmitting(false);
                     }, 400);
                 }}
-                
+                >
                     {({ isSubmitting }) => (
                         <Form>
                             <Field type="email" name="email" />

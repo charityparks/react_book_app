@@ -15,16 +15,16 @@ class GitHub extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);    
     }
-    // componentDidMount () {
-
-    // }
-
+ 
     handleSubmit(e) {
         e.preventDefault();
         this.setState({
-            isLoading :true
+            isLoading : true
         })
         this.getGitHubData(this.state.searchTerm);
+    }
+    handleChange(e) {
+        this.setState({ searchTerm: e.target.value});
     }
 
     getGitHubData (_searchTerm) {
@@ -60,14 +60,14 @@ class GitHub extends Component {
     return (
         <div>
             <Form inline onSubmit={this.handleSubmit}>
-                <FormGroup contolId="formInlineName">
-                    <FormControl
+                <Form.Group controlId="formInlineName">
+                    <Form.Control
                         type="text"
                         value={this.state.searchTerm}
                         placeholder="Enter Search Term"
                         onChange={this.handleChange}
                     />
-                </FormGroup>
+                </Form.Group>
                     {''}
                 <Button type="submit">
                     Search
