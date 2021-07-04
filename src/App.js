@@ -22,4 +22,18 @@ class App extends Component {
 
 export default App;
 
-class Header extends
+class Header extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div> 
+          <Switch>
+            <Route path="/github" component={GitHub} />
+            <Route exact path="/" component={Home} />
+            <Route path="/*" component={NotFound} />
+          </switch>
+        </div>
+      </BrowserRouter>
+    )
+  }
+}
