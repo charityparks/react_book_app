@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Products from './Products';
-import UserForm from './UserForm';
+// import Products from './Products';
+// import UserForm from './UserForm';
 import GitHub from './GitHub';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
@@ -31,9 +31,9 @@ class Header extends Component {
           <Navbar bg="light" expand="lg">
             <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="mr-auto">
-                <Nav.Link href="/">Home</Nav.link>
+                <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/github">GitHub</Nav.Link>
               </Nav>
             </Navbar.Collapse>
