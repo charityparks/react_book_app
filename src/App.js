@@ -3,6 +3,7 @@ import Products from './Products';
 import UserForm from './UserForm';
 import GitHub from './GitHub';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Nav, Navbar } from 'react-bootstrap';
 
 class App extends Component {
   render() {
