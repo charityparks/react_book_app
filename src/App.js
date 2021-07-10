@@ -47,3 +47,13 @@ class Home extends Component {
     )
   }
 }
+
+class NotFound extends Component {
+  render() {
+    return (
+      <div>
+        NotFound
+      </div>
+    )
+  }
+}
