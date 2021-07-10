@@ -31,9 +31,19 @@ class Header extends Component {
             <Route path="/github" component={GitHub} />
             <Route exact path="/" component={Home} />
             <Route path="/*" component={NotFound} />
-          </switch>
+          </Switch>
         </div>
       </BrowserRouter>
+    )
+  }
+}
+
+class Home extends Component {
+  render() {
+    return (
+      <div> 
+        Home
+      </div>
     )
   }
 }
