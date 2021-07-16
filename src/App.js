@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import Products from './Products';
 // import UserForm from './UserForm';
 import GitHub from './GitHub';
+import About from './About';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 
