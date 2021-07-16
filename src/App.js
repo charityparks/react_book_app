@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import UserForm from './UserForm';
 import GitHub from './GitHub';
 import About from './About';
+// import GitHubUser from './GitHub/GitHubUser';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 
@@ -41,9 +42,11 @@ class Header extends Component {
             </Navbar.Collapse>
           </Navbar>
           <Switch>
+            {/* <Route path="/github/user/:login/:id" component={GitHubUser}/> */}
             <Route path="/github" component={GitHub} />
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            
             <Route path="/*" component={NotFound} />
           </Switch>
         </div>
